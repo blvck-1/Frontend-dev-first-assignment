@@ -1,9 +1,27 @@
 /* styles.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Asap", sans-serif;
+  scroll-behavior: smooth;
+}
+
+#navbar {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
 
 /* style the body */
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 62.5%px;
+}
+
+main {
+  position: absolute;
+  margin-left: 250px
 }
 /* Center the h1 element */
 h1 {
@@ -50,9 +68,9 @@ div {
     color: darkmagenta;
   }
   button {
-    font-size: 30px;
+    font-size: 20px;
   }
     button:hover {
-    transform: scale(1.5) perspective(1px);
+    transform: scale(1) perspective(3px);
     background-color: yellow;
   }
