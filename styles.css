@@ -7,70 +7,95 @@
   scroll-behavior: smooth;
 }
 
+a {
+  text-decoration: none;
+}
+
 #navbar {
   position: fixed;
-  top: 0px;
+  top: 20px;
   left: 0px;
+}
+header {
+  position: fixed;
+  top: 10px;
+  left: 0%;
+  width: 100%;
+  padding: 20px;
+  border-bottom: 1px solid #000;
+  font-size: 40px;
+  text-align: center;
+}
+
+a {
+  margin: auto;
+  padding: 10px 20px;
+  font-size: 2rem;
+  color: #000;
+  border-radius: 5px;
+  letter-spacing: 0.5px;
+}
+
+a:hover, a.active {
+  background: #00c2cb;
+  color: #42455a;
+  transition: 0.1s ease-out;
+  letter-spacing: 5px;
 }
 
 /* style the body */
 body {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 62.5%px;
+    font-size: 20px;
 }
 
 main {
   position: absolute;
   margin-left: 250px
 }
-/* Center the h1 element */
-h1 {
-    text-align: center;
-    color:#007bff
-  }
-  
-  /* Add some colors to the list items */
-ul li {
-    color: orange;
-  }
 
-  /* style the h4 element */
-  h4 {
-    text-align: justify;
-    color:red;
-  }
-  
-  /* style the p element */
-  p {
-    text-align: left;
-    color: chocolate;
-  }
-  .python, .c-plus {
-    color: #007bff;
-  }
-  .javascript, .swift {
-    color: rgb(255, 149, 20);
-  }
-  .ruby {
-    color: red;
-  }
   /* Style the div element */
-div {
-    background-color: #f0f0f0; /* Light gray */
-    padding: 20px;
-    margin: 20px auto;
-    width: 80%;
-    text-align: left;
+section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  margin: 20px auto;
+  width: 80%;
+  text-align: left;
+  align-items: center;
+}
+
+
+@media (max-width: 900px) {
+  section h1 {
+    font-size: 2rem;
+    text-align: center;
   }
+  section .text-container {
+    flex-direction: column;
+  }
+}
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 2s all ease;
+}
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
   
-  .poll {
-    font-family: Arial, Helvetica, sans-serif;
-    color: darkmagenta;
+.poll {
+  font-family: Arial, Helvetica, sans-serif;
+  color: darkmagenta;
   }
   button {
-    font-size: 20px;
+  font-size: 20px;
   }
-    button:hover {
-    transform: scale(1) perspective(3px);
-    background-color: yellow;
+button:hover {
+  transform: scale(1) perspective(3px);
+  background-color: yellow;
   }
